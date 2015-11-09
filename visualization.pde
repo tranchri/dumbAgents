@@ -11,7 +11,7 @@ int NW = 7;
 
 // how big of a step the agent takes 
 // and the size of the agent itsef
-int stepSize = 5;
+int stepSize = 8;
 int diameter;
 int posY = (int)random(0, height);
 int posX = (int)random(0, width);
@@ -69,11 +69,13 @@ void draw() {
     // Draw a circle at the position.
     noStroke();
     if ((int)random(0, width) == posX || (int)random(0, height) == posY) {
-       diameter = 7;
+       diameter = 5;
+       stroke(255);
        fill(215, 186, 0);
     }
     else {
       diameter = 1;
+      noStroke();
       fill(255, 100);
     }
     ellipse(posX + stepSize/2, posY + stepSize/2, diameter, diameter);
