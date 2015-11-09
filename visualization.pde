@@ -81,3 +81,8 @@ void draw() {
     ellipse(posX + stepSize/2, posY + stepSize/2, diameter, diameter);
   }
 }
+
+// Save image is s is pressed.
+void keyReleased() {
+ if (key == 's' || key == 'S') saveFrame("result####.png"); 
+}
